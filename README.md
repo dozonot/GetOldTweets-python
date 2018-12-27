@@ -1,3 +1,40 @@
+# Usage
+
+## Requirements
+
+### Python3 requirements
+
+```
+pip install lxml pyquery elasticsearch
+```
+
+### Create Elasticsearch, and Kibana (Tested on Ubuntu 18.04)
+
+```
+sudo sysctl -w vm.max_map_count=262144
+docker-compose up -d
+```
+
+## Execution
+
+```
+$ get-tweet.py --help
+usage: get-tweet.py [-h] -f FIRSTDATE -l LASTDATE -t TEXT [-c COUNT] [-e EXPORTHOST] [-p EXPORTPORT]                                                                                                               
+                                                                                                                                                                                                                   
+Get tweet and import Elasticsearch.                                                                                                                                                                                
+                                                                                                                                                                                                                   
+optional arguments:                                                                                                                                                                                                
+  -h, --help            show this help message and exit                                                                                                                                                            
+  -f FIRSTDATE,  --firstdate  FIRSTDATE    <Require> First tweet date "YYYY-MM-DD".
+  -l LASTDATE,   --lastdate   LASTDATE     <Require> Last tweet date "YYYY-MM-DD".
+  -t TEXT,       --text       TEXT         <Require> Search text "xxxxx".
+  -c COUNT,      --count      COUNT        <Option> Maximum number to collect "N", default 300.
+  -e EXPORTHOST, --exporthost EXPORTHOST   <Option> Destination elasticsearch host, default localhost.
+  -p EXPORTPORT, --exportport EXPORTPORT   <Option> Destination elasticsearch port, default 9200.
+```
+
+Original README.md
+
 # Get Old Tweets Programatically
 A project written in Python to get old tweets, it bypass some limitations of Twitter Official API.
 
