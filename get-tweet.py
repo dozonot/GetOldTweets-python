@@ -12,7 +12,7 @@ parser = argparse.ArgumentParser(
 parser.add_argument("-f", "--firstdate",   type=str, required=True,       help='<Require> First tweet date "YYYY-MM-DD".')
 parser.add_argument("-l", "--lastdate",    type=str, required=True,       help='<Require> Last tweet date "YYYY-MM-DD".')
 parser.add_argument("-t", "--text",        type=str, required=True,       help='<Require> Search text "xxxxx".')
-parser.add_argument("-c", "--count",       type=int, default=3000,        help='<Option> Maximum number to collect "N", default 3000.')
+parser.add_argument("-c", "--count",       type=int, default=300,         help='<Option> Maximum number to collect "N", default 300.')
 parser.add_argument("-e", "--exporthost",  type=str, default="localhost", help='<Option> Destination elasticsearch host, default localhost.')
 parser.add_argument("-p", "--exportport",  type=int, default=9200,        help='<Option> Destination elasticsearch port, default 9200.')
 
